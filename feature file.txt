@@ -1,0 +1,116 @@
+
+Feature: Conference Registration
+
+Scenario: title matching  
+	Given User open the conference Registration page 
+	Then Title must be as "Conference Registration" 
+	
+Scenario: Unsuccessful conference Registration, when Firstname field is blank  
+	Given User open the conference Registration page 
+	When User Enter Wrong credential First Name as "" 
+	Then a alert is generated with message as "Please fill the first Name" on clicking the next button 
+	
+	
+Scenario: Unsuccessful conference Registration, when Lastname field is blank  
+	Given User open the conference Registration page 
+	When User Enter Wrong credential Last Name as "" 
+	Then a alert is generated with message as "Please fill the Last Name" on clicking the next button 
+	
+	
+Scenario: Unsuccessful conference Registration, when Email is wrong  
+	Given User open the conference Registration page 
+	When User Enter Wrong credential Email as "abcgmail.com" 
+	Then a alert is generated with message as "Please fill the right email" 
+	
+Scenario: Unsuccessful conference Registration, when contact deatils field is blank  
+	Given User open the conference Registration page 
+	When User Enter Wrong credential contact number as " " 
+	Then a alert is generated with message as "Please fill the contact number" on clicking the next button 
+	
+Scenario: Unsuccessful conference Registration, when contact entry is wrong  
+	Given User open the conference Registration page 
+	When User Enter Wrong credential contact number as "85631478" 
+	Then a alert is generated with message as "Please enter the valid contact number" on clicking the next button 
+	
+Scenario: Unsuccessful conference Registration, when select wrong number of people
+	Given User open the conference Registration page 
+	When User Enter Wrong credential number of people as "" 
+	Then a alert is generated with message as "7" on clicking the next button 
+	
+	
+Scenario: Unsuccessful conference Registration, when building name field is blank 
+	Given User open the conference Registration page 
+	When User Enter Wrong credential bulding name and room number as " " 
+	Then a error is generated with message as "* Please enter building name" on clicking the next button 
+	
+	
+Scenario: Unsuccessful conference Registration, when Area field is blank 
+	Given User open the conference Registration page 
+	When User Enter Wrong credential Area Name as ""  
+	Then a error is generated with message as " Please fill the Area" 
+	
+		
+Scenario: Unsuccessful conference Registration, when city field is blank 
+	Given User open the conference Registration page 
+	When User Enter Wrong credential City Name as ""  
+	Then a error is generated with message as " Please select the city" on clicking the next button 
+	
+	
+		
+Scenario: Unsuccessful conference Registration, when state name field is blank 
+	Given User open the conference Registration page 
+	When User Enter Wrong credential State Name as ""  
+	Then a error is generated with message as " Please select the State" on clicking the next button 
+	
+	
+Scenario: Unsuccessful conference Registration, when membership field is blank 
+	Given User open the conference Registration page 
+	When User Enter Wrong credential selection the member ship  as " "  
+	Then a error is generated with message as " Please select the State" on clicking the next button 
+	
+Scenario: Successful conference Registration
+	Given User open the conference Registration page 
+	When User Enter Valid credential 
+	Then Title must be as "Personal Details"
+	
+	
+
+Scenario: Unsuccessful Payment Details, when cardholder name  field is blank 
+	Given User open the  payment details page 
+	When User Enter Wrong credential cardholder name as " "  
+	Then a alert is generated with message as " Please fill the card holder name" on clicking the next button
+	
+ 
+Scenario: Unsuccessful Payment Details, when debitcard number field is blank 
+	Given User open the  payment details page 
+	When User Enter Wrong credential debitcard number as " "  
+	Then a alert is generated with message as " Please fill the debitcard number" on clicking the next button
+	
+ 
+Scenario: Unsuccessful Payment Details, when  card expiration month field is blank 
+	Given User open the  payment details page 
+	When User Enter Wrong credential card expiration month as " "  
+	Then a alert is generated with message as " Please fill the card expiration month" on clicking the next button
+	
+Scenario: Unsuccessful Payment Details, when card expiration year field is blank 
+	Given User open the  payment details page 
+	When User Enter Wrong credential card expiration year as " "  
+	Then a alert is generated with message as " Please fill the year" on clicking the next button
+	
+  
+Scenario: Successful Payment Details
+	Given User open the conference Registration page 
+	When User Enter Valid credential 
+	Then a alert is generated with message as "Conference room booking successfully done"
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
